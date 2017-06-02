@@ -10,6 +10,7 @@ public:
 	BinaTree();
 	~BinaTree();
 
+	
 private:
 	BinaTreeNode<T>*root;
 
@@ -18,6 +19,8 @@ private:
 template<class T>
 inline BinaTree<T>::BinaTree()
 {
+	root = new BinaTreeNode<T>;
+
 }
 
 template<class T>
