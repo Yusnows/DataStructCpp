@@ -14,7 +14,7 @@ public:
 	static T* InsertMergeSort(T a[], int len, char mode);
 	static void MergeBorder(T x[], T y[], int s, int n,char mode);
 	static void Merge(T a[],T b[], int left, int mid, int right,char mode);
-	static void Insert_s(T a[], int left, int right, char mode);
+	static void InsertSort_s(T a[], int left, int right, char mode);
 };
 
 template<class T>
@@ -118,17 +118,17 @@ inline T * Sort<T>::InsertMergeSort(T a[], int len, char mode)
 	{
 		while (i + s - 1 < len)
 		{
-			Insert_s(a, i, i + s - 1, mode);
+			InsertSort_s(a, i, i + s - 1, mode);
 			i = i + s;
 		}
 		if (i < len)
 		{
-			Insert_s(a, i, len - 1, mode);
+			InsertSort_s(a, i, len - 1, mode);
 		}
 	}
 	else
 	{
-		Insert_s(a, i, len-1, mode);
+		InsertSort_s(a, i, len-1, mode);
 	}
 	while (s < len)
 	{
@@ -215,7 +215,7 @@ inline void Sort<T>::Merge(T x[], T y[],int left, int mid, int right,char mode)
 }
 
 template<class T>
-inline void Sort<T>::Insert_s(T a[], int left, int right, char mode)
+inline void Sort<T>::InsertSort_s(T a[], int left, int right, char mode)
 {
 	T key = a[0];
 	int i = left;

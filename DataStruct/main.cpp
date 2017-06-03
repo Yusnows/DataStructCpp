@@ -2,7 +2,7 @@
 
 using namespace std;
 
-#define SIZE 100
+#define SIZE 100000000
 
 int main()
 {
@@ -31,24 +31,24 @@ void StackTest()
 
 void SortTest()
 {
-	int array[SIZE];
+	int *array = new int[SIZE];
 	for (int i = 0; i < SIZE; i++)
 	{
 		array[i] = SIZE - i;
-		if (i % 20 == 0)
+	/*	if (i % 20 == 0)
 			cout << endl;
-		cout << array[i] << "  ";
+		cout << array[i] << "  ";*/
 	}
 	cout << endl;
 	Sort<int>::InsertMergeSort(array, SIZE, UP);
-//	Sort<int>::MergeSort(array, SIZE, DOWN);
-//	Sort<int>::InsertSort(array, SIZE, UP);
-	for (int i = 0; i < SIZE; i++)
+	Sort<int>::MergeSort(array, SIZE, DOWN);
+	Sort<int>::InsertSort(array, SIZE, UP);
+/*	for (int i = 0; i < SIZE; i++)
 	{
 		if (i % 20 == 0)
 			cout << endl;
 		cout << array[i] << "  ";
-	}
+	}*/
 
 	cout << endl;
 	for (int i = 0; i < SIZE; i++)
