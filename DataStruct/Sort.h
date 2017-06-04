@@ -21,9 +21,10 @@ template<class T>
 inline T * Sort<T>::BublleSort(T a[], int len, char mode)
 {
 	T temp = a[0];
+	bool sorted = false;
 	if (mode == UP)
 	{
-		for (int i = 0; i < len - 1; i++)
+		for (int i = 0; (i < len - 1) && (sorted =!sorted); i++)
 		{
 			for (int j = 0; j < len - i - 1; j++)
 			{
@@ -32,6 +33,7 @@ inline T * Sort<T>::BublleSort(T a[], int len, char mode)
 					temp = a[j];
 					a[j] = a[j + 1];
 					a[j + 1] = temp;
+					sorted = false;
 				}
 			}
 		}
@@ -40,13 +42,14 @@ inline T * Sort<T>::BublleSort(T a[], int len, char mode)
 	{
 		for (int i = 0; i < len - 1; i++)
 		{
-			for (int j = 0; j < len - i - 1; j++)
+			for (int j = 0; (j < len - i - 1)&&(sorted = !sorted); j++)
 			{
 				if (a[j] < a[j + 1])
 				{
 					temp = a[j];
 					a[j] = a[j + 1];
 					a[j + 1] = temp;
+					sorted = false;
 				}
 			}
 		}

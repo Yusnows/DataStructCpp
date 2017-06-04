@@ -1,8 +1,8 @@
 #include "main.h"
-
+#include<vector>
 using namespace std;
 
-#define SIZE 100000000
+#define SIZE 10000000
 
 int main()
 {
@@ -42,7 +42,7 @@ void SortTest()
 	cout << endl;
 	Sort<int>::InsertMergeSort(array, SIZE, UP);
 	Sort<int>::MergeSort(array, SIZE, DOWN);
-	Sort<int>::InsertSort(array, SIZE, UP);
+	Sort<int>::BublleSort(array, SIZE, DOWN);
 /*	for (int i = 0; i < SIZE; i++)
 	{
 		if (i % 20 == 0)
