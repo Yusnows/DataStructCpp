@@ -7,6 +7,8 @@ using namespace std;
 int main()
 {
 	SortTest();
+	vector<int> a;
+	a.push_back(1);
 	return 0;
 }
 

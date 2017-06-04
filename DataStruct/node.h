@@ -12,13 +12,13 @@ struct node
 };
 
 template<class T>
-struct BinaTreNode
+struct BinTreeNode
 {
 	T data;
-	BinaTreNode<T>*left;
-	BinaTreNode<T>*right;
-	BinaTreNode<T>*parent;
+	BinTreeNode<T>*left;
+	BinTreeNode<T>*right;
+	BinTreeNode<T>*parent;
 
-	BinaTreNode() :left(nullptr), right(nullptr),parent(nullptr) {}
-	BinaTreNode(T value) :data(value), left(nullptr), right(nullptr),parent(nullptr) {}
+	BinTreeNode() :left(nullptr), right(nullptr),parent(nullptr) {}
+	BinTreeNode(T value) :data(value), left(nullptr), right(nullptr),parent(nullptr) {}
 };

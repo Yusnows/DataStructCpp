@@ -4,26 +4,26 @@
 #include"node.h"
 
 template <class T>
-class BinaTree
+class BinTree
 {
 public:
-	BinaTree();
-	~BinaTree();
+	BinTree();
+	~BinTree();
 
 	
 private:
-	BinaTreeNode<T>*root;
+	BinTreeNode<T>*root;
 
 };
 
 template<class T>
-inline BinaTree<T>::BinaTree()
+inline BinTree<T>::BinTree()
 {
-	root = new BinaTreeNode<T>;
+	root = new BinTreeNode<T>;
 
 }
 
 template<class T>
-inline BinaTree<T>::~BinaTree()
+inline BinTree<T>::~BinTree()
 {
 }
